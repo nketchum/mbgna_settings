@@ -1,0 +1,4 @@
+administer mbgna_settings configuration:
+  title: 'Administer mbgna_settings configuration'
+  description: 'View and change settings for basic customized functionality.'
+  restrict access: true

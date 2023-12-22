@@ -1,0 +1,7 @@
+mbgna_settings.settings_form:
+  path: '/admin/config/system/mbgna-settings'
+  defaults:
+    _title: 'MBGNA settings'
+    _form: 'Drupal\mbgna_settings\Form\SettingsForm'
+  requirements:
+    _permission: 'administer mbgna_settings configuration'

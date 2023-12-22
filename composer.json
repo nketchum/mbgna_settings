@@ -1,0 +1,10 @@
+{
+    "name": "mbgna/mbgna_settings",
+    "type": "drupal-module",
+    "description": "Provides custom settings for the site.",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "php": "^8.1",
+        "drupal/core": "^9.4 || ^10"
+    }
+}

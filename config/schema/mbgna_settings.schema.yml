@@ -1,0 +1,24 @@
+# Schema for the configuration files of the MBGNA Settings module.
+mbgna_settings.settings:
+  type: config_object
+  label: 'MBGNA settings'
+  mapping:
+    membership_user_roles:
+      type: sequence
+      label: 'Select membership user roles'
+      sequence:
+        type: string
+    privileged_user_roles:
+      type: sequence
+      label: 'Select privileged user roles'
+      sequence:
+        type: string
+    staff_user_role:
+      type: string
+      label: 'Select the staff user role'
+    intern_user_role:
+      type: string
+      label: 'Select the intern user role'
+    author_user_role:
+      type: string
+      label: 'Select the author user role'

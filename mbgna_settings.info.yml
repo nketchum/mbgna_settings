@@ -1,0 +1,5 @@
+name: MBGNA Settings
+type: module
+description: Provides settings for the site.
+package: MBGNA
+core_version_requirement: ^9 || ^10
