@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Add promo_calc_pay_method param into the config to specify
+ * which payment method to use when calculating promotions for
+ * specific products.
+ */
+function mbgna_settings_update_10001() {
+  $config_factory = \Drupal::configFactory();
+  $config = $config_factory->getEditable('mbgna_settings.settings');
+  if (empty($config->get('promo_calc_pay_method'))) {
+    $config->set('promo_calc_pay_method', '');
+    $config->save(TRUE);
+  }
+}

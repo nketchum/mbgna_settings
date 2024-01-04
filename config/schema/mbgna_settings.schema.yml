@@ -22,3 +22,6 @@ mbgna_settings.settings:
     author_user_role:
       type: string
       label: 'Select the author user role'
+    promo_calc_pay_method:
+      type: string
+      label: 'Select the payment method for calcuating promotions'
