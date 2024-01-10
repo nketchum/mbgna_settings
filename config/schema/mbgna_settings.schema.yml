@@ -25,3 +25,6 @@ mbgna_settings.settings:
     promo_calc_pay_method:
       type: string
       label: 'Select the payment method for calcuating promotions'
+    promotions_display:
+      type: boolean
+      label: 'Display promotions on "Add to Cart" forms'

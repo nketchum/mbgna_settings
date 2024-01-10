@@ -101,6 +101,13 @@ class SettingsForm extends ConfigFormBase {
       '#options' => $payment_gateways_options,
     ];
 
+    $form['promotions_display'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Display promotions'),
+      '#default_value' => $config->get('promotions_display') ? $config->get('promotions_display') : '',
+      '#description' => $this->t('Check to display promotions near "add to cart" forms. Clear the cache for settings to take effect.'),
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -121,6 +128,7 @@ class SettingsForm extends ConfigFormBase {
     $this->config('mbgna_settings.settings')->set('intern_user_role', $form_state->getValue('intern_user_role'))->save();
     $this->config('mbgna_settings.settings')->set('author_user_role', $form_state->getValue('author_user_role'))->save();
     $this->config('mbgna_settings.settings')->set('promo_calc_pay_method', $form_state->getValue('promo_calc_pay_method'))->save();
+    $this->config('mbgna_settings.settings')->set('promotions_display', $form_state->getValue('promotions_display'))->save();
     parent::submitForm($form, $form_state);
   }
 

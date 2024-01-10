@@ -13,3 +13,12 @@ function mbgna_settings_update_10001() {
     $config->save(TRUE);
   }
 }
+
+function mbgna_settings_update_10002() {
+  $config_factory = \Drupal::configFactory();
+  $config = $config_factory->getEditable('mbgna_settings.settings');
+  if (empty($config->get('promotions_display'))) {
+    $config->set('promotions_display', '');
+    $config->save(TRUE);
+  }
+}
