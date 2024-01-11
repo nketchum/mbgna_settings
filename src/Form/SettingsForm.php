@@ -113,6 +113,7 @@ class SettingsForm extends ConfigFormBase {
       '#title' => $this->t('Member activity notifications'),
       '#default_value' => $config->get('member_activity_notification_email') ? $config->get('member_activity_notification_email') : '',
       '#description' => $this->t('Email address that will receive notifications when members update their account.'),
+      '#required' => TRUE,
     ];
 
     return parent::buildForm($form, $form_state);
