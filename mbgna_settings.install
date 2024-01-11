@@ -22,3 +22,12 @@ function mbgna_settings_update_10002() {
     $config->save(TRUE);
   }
 }
+
+function mbgna_settings_update_10003() {
+  $config_factory = \Drupal::configFactory();
+  $config = $config_factory->getEditable('mbgna_settings.settings');
+  if (empty($config->get('member_activity_notification_email'))) {
+    $config->set('member_activity_notification_email', '');
+    $config->save(TRUE);
+  }
+}

@@ -28,3 +28,6 @@ mbgna_settings.settings:
     promotions_display:
       type: boolean
       label: 'Display promotions on "Add to Cart" forms'
+    member_activity_notification_email:
+      type: string
+      label: 'Email address that will receive notifications when members update their account'

@@ -108,6 +108,13 @@ class SettingsForm extends ConfigFormBase {
       '#description' => $this->t('Check to display promotions near "add to cart" forms. Clear the cache for settings to take effect.'),
     ];
 
+    $form['member_activity_notification_email'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Member activity notifications'),
+      '#default_value' => $config->get('member_activity_notification_email') ? $config->get('member_activity_notification_email') : '',
+      '#description' => $this->t('Email address that will receive notifications when members update their account.'),
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -129,6 +136,7 @@ class SettingsForm extends ConfigFormBase {
     $this->config('mbgna_settings.settings')->set('author_user_role', $form_state->getValue('author_user_role'))->save();
     $this->config('mbgna_settings.settings')->set('promo_calc_pay_method', $form_state->getValue('promo_calc_pay_method'))->save();
     $this->config('mbgna_settings.settings')->set('promotions_display', $form_state->getValue('promotions_display'))->save();
+    $this->config('mbgna_settings.settings')->set('member_activity_notification_email', $form_state->getValue('member_activity_notification_email'))->save();
     parent::submitForm($form, $form_state);
   }
 
